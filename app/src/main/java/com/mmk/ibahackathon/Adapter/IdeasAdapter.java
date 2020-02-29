@@ -1,6 +1,8 @@
 package com.mmk.ibahackathon.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.mmk.ibahackathon.IdeaDetailActivity;
 import com.mmk.ibahackathon.Model.Idea;
 import com.mmk.ibahackathon.R;
 
@@ -37,7 +40,7 @@ public class IdeasAdapter extends RecyclerView.Adapter<IdeasAdapter.ViewHolder> 
         Idea idea=ideaList.get(position);
         holder.ideaTitleTxt.setText(idea.getTitle());
         holder.ideaDescriptionTxt.setText(idea.getDescription());
-        holder.ideaImage.setBackground(idea.getImg());
+        holder.ideaImage.setBackgroundResource(idea.getImg());
 
 
     }
@@ -56,6 +59,17 @@ public class IdeasAdapter extends RecyclerView.Adapter<IdeasAdapter.ViewHolder> 
             ideaTitleTxt=itemView.findViewById(R.id.row_idea_title);
             ideaDescriptionTxt=itemView.findViewById(R.id.row_idea_description);
             ideaImage=itemView.findViewById(R.id.row_idea_img);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(context, IdeaDetailActivity.class);
+                    Bundle bundle=new Bundle();
+                    bundle.putSerializable("idea",ideaList.get(getAdapterPosition()));
+                    intent.putExtra("ideaBundle",bundle);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

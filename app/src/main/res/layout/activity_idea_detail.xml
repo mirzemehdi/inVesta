@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IdeaDetailActivity">
+
+
+
+            <RelativeLayout
+                android:id="@+id/mainAppBarDetail"
+                android:animateLayoutChanges="true"
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:background="#fff"
+                android:layout_height="64dp">
+
+                <TextView
+                    android:id="@+id/ideaTitleDetail"
+                    android:text="Digital Ocean"
+                    android:textColor="#3d3d3d"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/tthoves_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+                <ImageView
+                    android:id="@+id/backDetail"
+                    android:src="@drawable/ic_back"
+                    android:layout_marginStart="8dp"
+                    android:tint="@color/colorPrimary"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+
+
+    <ScrollView
+        android:layout_below="@id/mainAppBarDetail"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:layout_height="match_parent">
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/ideaImageDetail"
+                android:scaleType="fitXY"
+                android:alpha="0.6"
+                android:layout_width="match_parent"
+                android:src="@drawable/digitalocean"
+                android:layout_height="210dp">
+
+            </ImageView>
+
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:layout_marginBottom="24dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/detail1"
+                    android:textSize="12sp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/tthoves_medium"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/detail_bg"
+                    android:text="Popular startups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/detail12"
+                    android:textSize="12sp"
+                    android:layout_toEndOf="@+id/detail1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/tthoves_medium"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/detail_bg"
+                    android:text="technology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18sp"
+                    android:fontFamily="@font/tthoves_demibold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Investment"
+                    android:id="@+id/investmentDetail"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <ProgressBar
+                    android:id="@+id/progressDetail"
+                    android:layout_below="@id/investmentDetail"
+                    android:layout_width="match_parent"
+                    android:progress="60"
+                    android:scaleY="3"
+                    android:progressTint="@color/colorPrimary"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_height="14dp">
+
+                </ProgressBar>
+
+                <TextView
+                    android:layout_below="@id/progressDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="$5678"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/tthoves_medium"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_below="@id/progressDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="$10000"
+                    android:layout_alignEnd="@id/progressDetail"
+                    android:textColor="#3d3d3d"
+                    android:fontFamily="@font/tthoves_medium"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18sp"
+                    android:fontFamily="@font/tthoves_demibold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="About"
+                    android:id="@+id/aboutDetail"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_below="@id/aboutDetail"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:textColor="#3d3d3d"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18sp"
+                    android:fontFamily="@font/tthoves_demibold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Business Plan"
+                    android:id="@+id/businessPlanDetail"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_below="@id/businessPlanDetail"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:textColor="#3d3d3d"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+            <!--            popular investors-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:layout_marginBottom="12dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18sp"
+                    android:fontFamily="@font/tthoves_demibold"
+                    android:textColor="@color/colorBlack"
+                    android:text="Popular investors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:text="view all"
+                    android:layout_alignParentEnd="true"
+
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/investorSRecyclerView"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--           advantages of F5-->
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:layout_marginBottom="12dp"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18sp"
+                    android:fontFamily="@font/tthoves_demibold"
+                    android:textColor="@color/colorBlack"
+                    android:text="Advantages of F5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/advantagesRecyclerView"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:menu="@menu/bottom_nav"
+        android:layout_marginTop="16dp"
+        android:id="@+id/bottomNavigation"
+        android:animateLayoutChanges="true"
+        android:background="#f8f8f8"
+        app:itemTextColor="@color/bottom_nav_state"
+        app:itemIconTint="@color/bottom_nav_state"
+        android:alpha="0.82"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>

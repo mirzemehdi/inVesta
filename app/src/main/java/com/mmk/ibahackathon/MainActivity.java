@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.mmk.ibahackathon.Adapter.AdvantageAdapter;
 import com.mmk.ibahackathon.Adapter.IdeasAdapter;
 import com.mmk.ibahackathon.Adapter.InvestorsAdapter;
+import com.mmk.ibahackathon.Model.Advantage;
 import com.mmk.ibahackathon.Model.Idea;
 import com.mmk.ibahackathon.Model.Investor;
 
@@ -15,11 +17,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView popularIdeaRecyclerView,newIdeaRecyclerView,investorsRecyclerView;
+    private RecyclerView popularIdeaRecyclerView,newIdeaRecyclerView,investorsRecyclerView,advantagesRecylerView;
     private IdeasAdapter popularIdeaAdapter,newIdeaAdapter;
     private InvestorsAdapter investorsAdapter;
+    private AdvantageAdapter advantagesAdapter;
     private List<Idea> popularIdeaList,newIdeaList;
     private List<Investor> investorsList;
+    private List<Advantage> advantageList;
 
 
     @Override
@@ -30,7 +34,15 @@ public class MainActivity extends AppCompatActivity {
         initPopularIdeasList();
         initNewIdeasList();
         initInvestorsList();
+        initAdvantagessList();
         initView();
+    }
+
+    private void initAdvantagessList() {
+
+        advantageList=new ArrayList<>();
+        advantageList.add(new Advantage("Easy to use","Description",getResources().getDrawable(R.drawable.ic_fingerprint)));
+        advantageList.add(new Advantage("Compact","Description",getResources().getDrawable(R.drawable.ic_moon)));
     }
 
     private void initInvestorsList() {
@@ -46,23 +58,24 @@ public class MainActivity extends AppCompatActivity {
     private void initNewIdeasList() {
         newIdeaList=new ArrayList<>();
         newIdeaList.add(new Idea("Nextsale","Social Proof, Urgency & Growth"
-                ,getResources().getDrawable(R.drawable.nextsale)));
+                ,R.drawable.nextsale));
         newIdeaList.add(new Idea("Product Hunt","Lorem Ipsum"
-                ,getResources().getDrawable(R.drawable.producthunt)));
+                ,R.drawable.producthunt));
     }
 
     private void initPopularIdeasList() {
         popularIdeaList=new ArrayList<>();
         popularIdeaList.add(new Idea("Crunchbase","Investments showing company"
-                ,getResources().getDrawable(R.drawable.crunchbase)));
+                ,R.drawable.crunchbase));
         popularIdeaList.add(new Idea("Digital Ocean","Lorem Ipsum"
-                ,getResources().getDrawable(R.drawable.digitalocean)));
+                ,R.drawable.digitalocean));
     }
 
     private void initView() {
         popularIdeaAdapter =new IdeasAdapter(popularIdeaList,this);
         newIdeaAdapter =new IdeasAdapter(newIdeaList,this);
         investorsAdapter=new InvestorsAdapter(investorsList,this);
+        advantagesAdapter=new AdvantageAdapter(advantageList,this);
         popularIdeaRecyclerView =findViewById(R.id.popularIdeasRecyclerView);
         popularIdeaRecyclerView.setHasFixedSize(true);
         popularIdeaRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
@@ -77,5 +90,10 @@ public class MainActivity extends AppCompatActivity {
         investorsRecyclerView.setHasFixedSize(true);
         investorsRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         investorsRecyclerView.setAdapter(investorsAdapter);
+
+        advantagesRecylerView =findViewById(R.id.advantagesRecyclerView);
+        advantagesRecylerView.setHasFixedSize(true);
+        advantagesRecylerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        advantagesRecylerView.setAdapter(advantagesAdapter);
     }
 }

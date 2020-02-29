@@ -2,13 +2,15 @@ package com.mmk.ibahackathon.Model;
 
 import android.graphics.drawable.Drawable;
 
-public class Idea {
+import java.io.Serializable;
+
+public class Idea implements Serializable {
     private String title;
     private String description;
-    private Drawable img;
+    private int img;
 
 
-    public Idea(String title, String description, Drawable img) {
+    public Idea(String title, String description, int img) {
         this.title = title;
         this.description = description;
         this.img = img;
@@ -33,11 +35,11 @@ public class Idea {
         this.description = description;
     }
 
-    public Drawable getImg() {
+    public int getImg() {
         return img;
     }
 
-    public void setImg(Drawable img) {
+    public void setImg(int img) {
         this.img = img;
     }
 }
