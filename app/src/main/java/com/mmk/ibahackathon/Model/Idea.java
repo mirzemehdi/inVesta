@@ -42,4 +42,6 @@ public class Idea implements Serializable {
     public void setImg(int img) {
         this.img = img;
     }
+
+
 }

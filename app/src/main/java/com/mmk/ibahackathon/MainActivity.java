@@ -1,14 +1,26 @@
 package com.mmk.ibahackathon;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mmk.ibahackathon.Adapter.AdvantageAdapter;
 import com.mmk.ibahackathon.Adapter.IdeasAdapter;
 import com.mmk.ibahackathon.Adapter.InvestorsAdapter;
+import com.mmk.ibahackathon.Fragments.FavoritesFragment;
+import com.mmk.ibahackathon.Fragments.MainFragment;
+import com.mmk.ibahackathon.Fragments.NotificationFragent;
+import com.mmk.ibahackathon.Fragments.ProfileFragment;
 import com.mmk.ibahackathon.Model.Advantage;
 import com.mmk.ibahackathon.Model.Idea;
 import com.mmk.ibahackathon.Model.Investor;
@@ -17,13 +29,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView popularIdeaRecyclerView,newIdeaRecyclerView,investorsRecyclerView,advantagesRecylerView;
-    private IdeasAdapter popularIdeaAdapter,newIdeaAdapter;
-    private InvestorsAdapter investorsAdapter;
-    private AdvantageAdapter advantagesAdapter;
-    private List<Idea> popularIdeaList,newIdeaList;
-    private List<Investor> investorsList;
-    private List<Advantage> advantageList;
+    private TextView toolbarTxtView;
+
+    private BottomNavigationView bottomNavigationView;
+    final Fragment fragment1 = new MainFragment();
+    final Fragment fragment2 = new ProfileFragment();
+    final Fragment fragment3 = new FavoritesFragment();
+    final Fragment fragment4 = new NotificationFragent();
+
+    final FragmentManager fm = getSupportFragmentManager();
+    private Fragment active = fragment1;
+
+
 
 
     @Override
@@ -31,69 +48,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initPopularIdeasList();
-        initNewIdeasList();
-        initInvestorsList();
-        initAdvantagessList();
+
         initView();
     }
 
-    private void initAdvantagessList() {
 
-        advantageList=new ArrayList<>();
-        advantageList.add(new Advantage("Easy to use","Description",getResources().getDrawable(R.drawable.ic_fingerprint)));
-        advantageList.add(new Advantage("Compact","Description",getResources().getDrawable(R.drawable.ic_moon)));
-    }
 
-    private void initInvestorsList() {
-        investorsList=new ArrayList<>();
-        investorsList.add(new Investor("Ivan Polo",getResources().getDrawable(R.drawable.investor1)));
-        investorsList.add(new Investor("Zarela Reed",getResources().getDrawable(R.drawable.investor2)));
-        investorsList.add(new Investor("Tua Manue",getResources().getDrawable(R.drawable.investor3)));
-        investorsList.add(new Investor("Gr Karak",getResources().getDrawable(R.drawable.investor1)));
-        investorsList.add(new Investor("Zarela Reed",getResources().getDrawable(R.drawable.investor2)));
-
-    }
-
-    private void initNewIdeasList() {
-        newIdeaList=new ArrayList<>();
-        newIdeaList.add(new Idea("Nextsale","Social Proof, Urgency & Growth"
-                ,R.drawable.nextsale));
-        newIdeaList.add(new Idea("Product Hunt","Lorem Ipsum"
-                ,R.drawable.producthunt));
-    }
-
-    private void initPopularIdeasList() {
-        popularIdeaList=new ArrayList<>();
-        popularIdeaList.add(new Idea("Crunchbase","Investments showing company"
-                ,R.drawable.crunchbase));
-        popularIdeaList.add(new Idea("Digital Ocean","Lorem Ipsum"
-                ,R.drawable.digitalocean));
+    public void setToolbarTxt(String toolbarTxt) {
+        toolbarTxtView.setText(toolbarTxt);
     }
 
     private void initView() {
-        popularIdeaAdapter =new IdeasAdapter(popularIdeaList,this);
-        newIdeaAdapter =new IdeasAdapter(newIdeaList,this);
-        investorsAdapter=new InvestorsAdapter(investorsList,this);
-        advantagesAdapter=new AdvantageAdapter(advantageList,this);
-        popularIdeaRecyclerView =findViewById(R.id.popularIdeasRecyclerView);
-        popularIdeaRecyclerView.setHasFixedSize(true);
-        popularIdeaRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        popularIdeaRecyclerView.setAdapter(popularIdeaAdapter);
+        toolbarTxtView=findViewById(R.id.toolbarText);
+        fm.beginTransaction().replace(R.id.frameLayout, active).commit();
+        bottomNavigationView=findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-        newIdeaRecyclerView =findViewById(R.id.newIdeasRecyclerView);
-        newIdeaRecyclerView.setHasFixedSize(true);
-        newIdeaRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        newIdeaRecyclerView.setAdapter(newIdeaAdapter);
 
-        investorsRecyclerView =findViewById(R.id.investorSRecyclerView);
-        investorsRecyclerView.setHasFixedSize(true);
-        investorsRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        investorsRecyclerView.setAdapter(investorsAdapter);
+                switch (menuItem.getItemId()){
 
-        advantagesRecylerView =findViewById(R.id.advantagesRecyclerView);
-        advantagesRecylerView.setHasFixedSize(true);
-        advantagesRecylerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        advantagesRecylerView.setAdapter(advantagesAdapter);
+                    case R.id.home_menu:
+                        active = fragment1;
+                        break;
+                    case R.id.profile_menu:
+                        active = fragment2;
+                        break;
+                    case R.id.favorites_menu:
+                        active = fragment3;
+                        break;
+                    case R.id.notification_menu:
+                        active = fragment4;
+                        break;
+
+
+                }
+                fm.beginTransaction().replace(R.id.frameLayout, active).commit();
+                return true;
+            }
+        });
     }
 }

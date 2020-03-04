@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    tools:context=".Fragments.ProfileFragment"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="98dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/profile_sample"
+            android:layout_height="98dp">
+
+
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Mirzamehdi Karimov"
+                android:textSize="20sp"
+                android:fontFamily="@font/tthoves_bold"
+                android:textColor="#131313"
+                android:layout_height="wrap_content">
+
+
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:text="Info"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:fontFamily="@font/tthoves_demibold"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:text="Settings"
+                android:textColor="#3d3d3d"
+                android:textSize="12sp"
+                android:fontFamily="@font/tthoves_demibold"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:text="Profile"
+                android:textColor="#3d3d3d"
+                android:textSize="12sp"
+                android:fontFamily="@font/tthoves_demibold"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:text="Startups"
+                android:textColor="#3d3d3d"
+                android:textSize="12sp"
+                android:fontFamily="@font/tthoves_demibold"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:weightSum="2"
+        android:layout_marginBottom="24dp"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/view_bg_border"
+            android:gravity="center"
+            android:layout_height="68dp">
+
+            <TextView
+                android:id="@+id/price"
+                android:text="15.3K"
+                android:layout_margin="1dp"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/tthoves_bold"
+                android:textColor="#3d3d3d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:text="INVESTMENT"
+                android:textSize="10sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/price"
+                android:textColor="#3d3d3d"
+                android:fontFamily="@font/tthoves_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/view_bg_border"
+            android:layout_height="68dp">
+
+            <TextView
+                android:id="@+id/price2"
+                android:text="4"
+                android:layout_margin="1dp"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/tthoves_bold"
+                android:textColor="#3d3d3d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:text="STARTUPS"
+                android:textSize="10sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/price2"
+                android:textColor="#3d3d3d"
+                android:fontFamily="@font/tthoves_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+        <!--            popularStartups-->
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginBottom="12dp"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/row_idea_img"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/nextsale"
+                    android:layout_height="192dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/row_idea_title"
+                    android:text="NextSale"
+                    android:fontFamily="@font/tthoves_demibold"
+                    android:textSize="16dp"
+                    android:textColor="#262626"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/row_idea_description"
+                    android:text="Social proof"
+                    android:layout_marginTop="4dp"
+                    android:textSize="14dp"
+                    android:textColor="#909090"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginBottom="12dp"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/row_idea_img2"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/producthunt"
+                    android:layout_height="192dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/row_idea_title2"
+                    android:text="ProductHunt"
+                    android:fontFamily="@font/tthoves_demibold"
+                    android:textSize="16dp"
+                    android:textColor="#262626"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/row_idea_description2"
+                    android:text="The best new products in tech"
+                    android:layout_marginTop="4dp"
+                    android:textSize="14dp"
+                    android:textColor="#909090"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

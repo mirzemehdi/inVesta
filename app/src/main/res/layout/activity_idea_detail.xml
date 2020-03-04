@@ -32,6 +32,7 @@
 
                 <ImageView
                     android:id="@+id/backDetail"
+                    android:onClick="back"
                     android:src="@drawable/ic_back"
                     android:layout_marginStart="8dp"
                     android:tint="@color/colorPrimary"
@@ -69,7 +70,6 @@
                 android:scaleType="fitXY"
                 android:alpha="0.6"
                 android:layout_width="match_parent"
-                android:src="@drawable/digitalocean"
                 android:layout_height="210dp">
 
             </ImageView>
@@ -124,7 +124,7 @@
                 <ImageView
                     android:layout_alignParentEnd="true"
                     android:tint="@color/colorPrimary"
-                    android:src="@drawable/ic_fav"
+                    android:src="@drawable/ic_passion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
@@ -219,6 +219,7 @@
 
                 </TextView>
 
+
                 <TextView
                     android:layout_below="@id/aboutDetail"
                     android:textSize="16sp"
@@ -260,8 +261,57 @@
 
                 </TextView>
 
-                <TextView
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/businessPlanTabDetail"
+                    android:layout_width="match_parent"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabIndicatorColor="@color/colorPrimary"
                     android:layout_below="@id/businessPlanDetail"
+                    app:tabMode="scrollable"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:text="Problem"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.tabs.TabItem>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:text="Solution"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.tabs.TabItem>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:text="Market"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.tabs.TabItem>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:text="Competition"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.tabs.TabItem>
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:text="Why"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.tabs.TabItem>
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+
+
+                <TextView
+                    android:layout_below="@id/businessPlanTabDetail"
                     android:textSize="16sp"
                     android:fontFamily="@font/tthoves_regular"
                     android:textColor="#3d3d3d"
@@ -283,12 +333,11 @@
 
 
 
-            <!--            popular investors-->
+            <!--             investors-->
             <RelativeLayout
 
                 android:layout_width="match_parent"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
 
                 android:layout_marginBottom="12dp"
@@ -298,68 +347,79 @@
                 <TextView
                     android:textSize="18sp"
                     android:fontFamily="@font/tthoves_demibold"
-                    android:textColor="@color/colorBlack"
-                    android:text="Popular investors"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-                <TextView
-                    android:text="view all"
-                    android:layout_alignParentEnd="true"
-
                     android:textColor="@color/colorPrimary"
+                    android:text="Investors"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                 </TextView>
+
+
 
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/investorSRecyclerView"
+                android:id="@+id/investorSRecyclerViewDetail"
                 android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLabelLayout"
+                app:boxBackgroundMode="outline"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="#d6d7d6"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputLabelEditText"
+                    android:inputType="number"
+                    android:textColor="#3d3d3d"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/colorPrimary"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:hint="Amount(AZN)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <!--           advantages of F5-->
             <RelativeLayout
 
                 android:layout_width="match_parent"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-
                 android:layout_marginBottom="12dp"
                 android:layout_height="wrap_content"
                 >
 
-                <TextView
-                    android:textSize="18sp"
-                    android:fontFamily="@font/tthoves_demibold"
-                    android:textColor="@color/colorBlack"
-                    android:text="Advantages of F5"
-                    android:layout_width="wrap_content"
+                <Button
+                    android:textSize="14sp"
+
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/tthoves_medium"
+                    android:textColor="#fff"
+                    android:text="Invest now"
+                    android:background="@drawable/btn_bg_border"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                </TextView>
+                </Button>
 
 
 
             </RelativeLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/advantagesRecyclerView"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
 
 
 
@@ -367,18 +427,6 @@
 
     </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        app:menu="@menu/bottom_nav"
-        android:layout_marginTop="16dp"
-        android:id="@+id/bottomNavigation"
-        android:animateLayoutChanges="true"
-        android:background="#f8f8f8"
-        app:itemTextColor="@color/bottom_nav_state"
-        app:itemIconTint="@color/bottom_nav_state"
-        android:alpha="0.82"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
 
 

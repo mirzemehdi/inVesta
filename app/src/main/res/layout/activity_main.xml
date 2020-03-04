@@ -17,9 +17,10 @@
                 android:layout_height="64dp">
 
                 <TextView
-                    android:text="YATIR"
+                    android:text="@string/app_name"
                     android:textColor="#fff"
                     android:textSize="28sp"
+                    android:id="@+id/toolbarText"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="24dp"
                     android:fontFamily="@font/tthoves_bold"
@@ -44,194 +45,15 @@
 
 
 
-    <ScrollView
-        android:layout_below="@id/mainAppBar"
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
+        android:layout_below="@id/mainAppBar"
         android:layout_above="@+id/bottomNavigation"
         android:layout_height="match_parent">
 
-
-
-
-
-        <LinearLayout
-            android:id="@+id/mainContainer"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-<!--            popularStartups-->
-            <RelativeLayout
-
-                android:layout_width="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-
-                android:layout_marginBottom="12dp"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:textSize="18sp"
-                    android:fontFamily="@font/tthoves_demibold"
-                    android:textColor="@color/colorBlack"
-                    android:text="Popular startups"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-                <TextView
-                    android:text="view all"
-                    android:layout_alignParentEnd="true"
-
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-            </RelativeLayout>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/popularIdeasRecyclerView"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-            <!--            newStartups-->
-            <RelativeLayout
-
-                android:layout_width="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-
-                android:layout_marginBottom="12dp"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:textSize="18sp"
-                    android:fontFamily="@font/tthoves_demibold"
-                    android:textColor="@color/colorBlack"
-                    android:text="New startups"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-                <TextView
-                    android:text="view all"
-                    android:layout_alignParentEnd="true"
-
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-            </RelativeLayout>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/newIdeasRecyclerView"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-            <!--            popular investors-->
-            <RelativeLayout
-
-                android:layout_width="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-
-                android:layout_marginBottom="12dp"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:textSize="18sp"
-                    android:fontFamily="@font/tthoves_demibold"
-                    android:textColor="@color/colorBlack"
-                    android:text="Popular investors"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-                <TextView
-                    android:text="view all"
-                    android:layout_alignParentEnd="true"
-
-                    android:textColor="@color/colorPrimary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/investorSRecyclerView"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-            <!--           advantages of F5-->
-            <RelativeLayout
-
-                android:layout_width="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-
-                android:layout_marginBottom="12dp"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:textSize="18sp"
-                    android:fontFamily="@font/tthoves_demibold"
-                    android:textColor="@color/colorBlack"
-                    android:text="Advantages of F5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-
-
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/advantagesRecyclerView"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="32dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-
-        </LinearLayout>
-
-    </ScrollView>
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         app:menu="@menu/bottom_nav"
