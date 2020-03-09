@@ -17,15 +17,15 @@ apk link:  https://github.com/mirzemehdi/onlinecontacts/raw/master/apk/onlinecon
 
 
 ## Used Libraries
-**Firebase Database** - For saving users ,messages,images in real-time database  
-**Picasso** - for getting image from url  
-**Process Button** - When Register for user-friendly  
-**RecylerView** - for showing users,messages in the list  
-**CardView** - in list row  
+**CircleImageView**   
+**Material Design**    
+**PinView**   
+**RecylerView**    
+**CardView**      
 
-### More Detail
+### More Detail  
 
-This app loads datas dynamic(part by part).While other datas are loading there is progress button like in Instagram.
+In this app investors and startupers or SME are in one platform which startupers can find investors easily and at the same time investors can invest any project. This is just some mockup view and wasn't connected any API  
 
 
 ## Authors
