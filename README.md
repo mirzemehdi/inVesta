@@ -9,7 +9,9 @@ This app is developed during IBA Hackathon
 
   
 <img src="screenshots/scr1.jpeg" alt="screenshot1" height="50%" width="30%">"  "<img src="screenshots/scr2.jpeg" alt="screenshot2" height="50%" width="30%">
-<img src="screenshots/scr3.jpeg" alt="screenshot1" height="50%" width="30%">"  "
+<img src="screenshots/scr3.jpeg" alt="screenshot1" height="50%" width="30%">"  "   
+<img src="screenshots/scr4.jpeg" alt="screenshot1" height="50%" width="30%">"  "<img src="screenshots/scr5.jpeg" alt="screenshot2" height="50%" width="30%">
+<img src="screenshots/scr6.jpeg" alt="screenshot1" height="50%" width="30%">"  "
 
 
 ### Installing
