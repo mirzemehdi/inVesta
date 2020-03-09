@@ -15,7 +15,7 @@ This app is developed during IBA Hackathon
 
 
 ### Installing
-apk link:  https://github.com/mirzemehdi/onlinecontacts/raw/master/apk/onlinecontacts.apk
+apk link:  https://github.com/mirzemehdi/onlinecontacts/raw/master/apk/investa.apk
 
 
 ## Used Libraries
