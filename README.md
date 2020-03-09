@@ -27,7 +27,7 @@ apk link:  https://github.com/mirzemehdi/inVesta/raw/master/apk/investa.apk
 
 ### More Detail  
 
-In this app investors and startupers or SME are in one platform which startupers can find investors easily and at the same time investors can invest any project. This is just some mockup view and wasn't connected any API  
+In this app investors and startupers or SME are in one platform which startupers can find investors easily and at the same time investors can invest any project. This is just some mockup view and wasn't connected to any API  
 
 
 ## Authors
