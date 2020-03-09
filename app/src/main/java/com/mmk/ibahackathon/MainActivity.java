@@ -7,9 +7,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +24,7 @@ import com.mmk.ibahackathon.Fragments.FavoritesFragment;
 import com.mmk.ibahackathon.Fragments.MainFragment;
 import com.mmk.ibahackathon.Fragments.NotificationFragent;
 import com.mmk.ibahackathon.Fragments.ProfileFragment;
+import com.mmk.ibahackathon.Helper.UserSave;
 import com.mmk.ibahackathon.Model.Advantage;
 import com.mmk.ibahackathon.Model.Idea;
 import com.mmk.ibahackathon.Model.Investor;
@@ -30,6 +34,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private TextView toolbarTxtView;
+    private ImageView optionsBtn;
 
     private BottomNavigationView bottomNavigationView;
     final Fragment fragment1 = new MainFragment();
@@ -50,22 +55,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         initView();
+        setClicks();
     }
 
-
-
-    public void setToolbarTxt(String toolbarTxt) {
-        toolbarTxtView.setText(toolbarTxt);
-    }
-
-    private void initView() {
-        toolbarTxtView=findViewById(R.id.toolbarText);
-        fm.beginTransaction().replace(R.id.frameLayout, active).commit();
-        bottomNavigationView=findViewById(R.id.bottomNavigation);
+    private void setClicks() {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
+                if (!UserSave.isLogedIn(MainActivity.this)&&menuItem.getItemId()!=R.id.home_menu){
+
+                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                    return false;
+                }
 
                 switch (menuItem.getItemId()){
 
@@ -88,5 +90,28 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        optionsBtn.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this,SettingsActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        bottomNavigationView.setSelectedItemId(R.id.home_menu);
+
+    }
+
+    public void setToolbarTxt(String toolbarTxt) {
+        toolbarTxtView.setText(toolbarTxt);
+    }
+
+
+    private void initView() {
+        toolbarTxtView=findViewById(R.id.toolbarText);
+        fm.beginTransaction().replace(R.id.frameLayout, active).commit();
+        bottomNavigationView=findViewById(R.id.bottomNavigation);
+        optionsBtn=findViewById(R.id.optionsBtnMain);
     }
 }

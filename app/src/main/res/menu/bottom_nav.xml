@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_notification"
         android:title="Notification"/>
     <item android:id="@+id/favorites_menu"
-        android:icon="@drawable/ic_like"
+        android:icon="@drawable/ic_favorites_bottom"
         android:title="Favorites"/>
     <item android:id="@+id/profile_menu"
         android:icon="@drawable/ic_user"

@@ -268,12 +268,14 @@
                     app:tabIndicatorColor="@color/colorPrimary"
                     android:layout_below="@id/businessPlanDetail"
                     app:tabMode="scrollable"
+                    app:tabTextAppearance="@style/CustomTabLayout"
                     android:layout_marginBottom="8dp"
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
                         android:text="Problem"
+
                         android:layout_height="wrap_content">
 
                     </com.google.android.material.tabs.TabItem>

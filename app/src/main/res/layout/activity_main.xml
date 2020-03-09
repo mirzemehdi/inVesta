@@ -32,6 +32,7 @@
 
 
                 <ImageView
+                    android:id="@+id/optionsBtnMain"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_menu"
                     android:layout_centerVertical="true"

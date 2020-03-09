@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-    <ScrollView
-        tools:context=".Fragments.MainFragment"
-        android:layout_width="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_height="match_parent">
+<ScrollView tools:context=".Fragments.MainFragment"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
 
@@ -55,7 +55,12 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/popularIdeasRecyclerView"
-                android:layout_marginStart="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_idea"
+                android:clipToPadding="false"
                 android:layout_marginBottom="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -87,7 +92,6 @@
                 <TextView
                     android:text="view all"
                     android:layout_alignParentEnd="true"
-
                     android:textColor="@color/colorPrimary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -99,7 +103,12 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/newIdeasRecyclerView"
-                android:layout_marginStart="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_idea"
                 android:layout_marginBottom="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -143,7 +152,12 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/investorSRecyclerView"
-                android:layout_marginStart="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_investor"
                 android:layout_marginBottom="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -178,7 +192,12 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/advantagesRecyclerView"
-                android:layout_marginStart="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/row_advantage"
                 android:layout_marginBottom="32dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_marginEnd="8dp"
     android:orientation="vertical"
-    android:paddingStart="49dp"
-    android:paddingEnd="49dp"
-    android:paddingTop="32dp"
-    android:background="@drawable/border"
-    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
     android:gravity="center_horizontal"
-
     android:layout_height="wrap_content">
 
-
     <LinearLayout
-        android:layout_width="106dp"
+        android:layout_width="130dp"
         android:background="#e9edf6"
         android:gravity="center"
-        android:layout_marginBottom="16dp"
-        android:layout_height="106dp">
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="70dp"
+        android:layout_height="130dp">
 
 
         <ImageView
-            android:id="@+id/row_advantage_img"
+            android:id="@+id/slide_view_img"
             android:layout_width="wrap_content"
             android:scaleType="centerCrop"
             android:background="@drawable/ic_fingerprint"
@@ -41,22 +35,28 @@
 
 
     <TextView
-        android:id="@+id/row_advantage_title"
+        android:id="@+id/slide_view_title"
         android:text="Title"
-        android:fontFamily="@font/tthoves_demibold"
-        android:textSize="16dp"
-        android:textColor="#262626"
-        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/tthoves_bold"
+        android:textSize="24sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#3d3d3d"
+        android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     </TextView>
 
     <TextView
-        android:id="@+id/row_advantage_desc"
+        android:id="@+id/slide_view_description"
         android:text="Description"
-        android:textSize="12sp"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
         android:textColor="#909090"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/tthoves_regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

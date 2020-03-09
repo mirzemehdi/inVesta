@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<LinearLayout
+    tools:context=".LoginActivity"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/mainAppBar"
+                android:animateLayoutChanges="true"
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:background="@color/colorPrimary"
+                android:layout_height="64dp">
+
+                <TextView
+                    android:text="@string/app_name"
+                    android:textColor="#fff"
+                    android:textSize="28sp"
+                    android:id="@+id/toolbarText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/tthoves_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+                <ImageView
+                    android:id="@+id/closeBtnSettings"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_close"
+                    android:layout_centerVertical="true"
+                    android:layout_width="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="32dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="About"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#3d3d3d"
+                android:textSize="20sp"
+                android:fontFamily="@font/tthoves_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#cacaca"
+                android:layout_marginBottom="16dp"
+                android:layout_height="1dp">
+
+            </View>
+
+            <TextView
+                android:text="Privacy Policy"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="#3d3d3d"
+                android:textSize="20sp"
+                android:fontFamily="@font/tthoves_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#cacaca"
+                android:layout_marginBottom="16dp"
+                android:layout_height="1dp">
+
+            </View>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logOutBtnSettings"
+        android:layout_width="match_parent"
+        android:text="Log out"
+        android:textColor="#d30707"
+        android:textSize="16sp"
+        app:cornerRadius="4dp"
+        app:strokeWidth="1dp"
+        android:padding="12dp"
+        app:strokeColor="#d30707"
+        app:rippleColor="#d30707"
+        app:backgroundTint="#fff"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/tthoves_medium"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+</LinearLayout>
+
+
+
+
+
+

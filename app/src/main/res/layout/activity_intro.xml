@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivity">
+
+
+    <TextView
+        android:id="@+id/skipTourBtn"
+        android:layout_width="wrap_content"
+        android:textColor="#909090"
+        android:textSize="14sp"
+        android:fontFamily="@font/tthoves_medium"
+        android:text="Skip Tour"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+
+<!--    <include layout="@layout/slide_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_below="@id/skipTourBtn"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+
+<!--    </include>-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerIntro"
+        android:layout_below="@id/skipTourBtn"
+        android:layout_width="match_parent"
+        android:layout_above="@id/dotsView"
+        android:layout_height="wrap_content">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/dotsView"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_above="@id/createAccountBtnIntro"
+        android:layout_marginBottom="124dp"
+        android:layout_height="30dp">
+
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createAccountBtnIntro"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signInBtnIntro"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/tthoves_medium"
+        android:padding="16dp"
+        android:text="Create your account"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="4dp"
+        app:rippleColor="@color/colorPrimary">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:id="@+id/signInBtnIntro"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/tthoves_medium"
+        android:text="@string/alreadyHaveAccountSignInTxt"
+        android:textColor="#3d3d3d"
+        android:textSize="14sp">
+
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".LoginActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="54dp"
+                android:layout_marginBottom="52dp"
+                android:fontFamily="@font/tthoves_bold"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="36sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/tthoves_bold"
+                android:text="Log In"
+                android:textColor="#3d3d3d"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/tthoves_regular"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting."
+                android:textColor="#909090"
+                android:textSize="16sp">
+
+
+            </TextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:paddingStart="8dp"
+                android:textColorHint="#909090"
+                app:boxBackgroundMode="outline">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:hint="Phone number"
+                    android:inputType="phone"
+                    android:textColor="#3d3d3d"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:textColorHint="#909090"
+                app:boxBackgroundMode="outline"
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingEnd="16dp"
+                    android:textColor="#3d3d3d"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/tthoves_medium"
+                android:text="Log In"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="4dp"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:padding="16dp"
+                app:rippleColor="@color/colorPrimary"
+                >
+
+            </com.google.android.material.button.MaterialButton>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/tthoves_regular"
+                android:text="@string/forgotPassTxt"
+                android:textColor="#3d3d3d"
+                android:textSize="14sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/signupBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/tthoves_regular"
+        android:text="@string/dontHaveAccountSignUpTxt"
+        android:textColor="#3d3d3d"
+        android:textSize="14sp">
+
+    </TextView>
+
+
+</LinearLayout>
+
+
+
+
+
+

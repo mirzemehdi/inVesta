@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView tools:context=".SmsVerificationActivity"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Enter the verification code"
+            android:textSize="24sp"
+            android:layout_marginTop="111dp"
+            android:textColor="#3d3d3d"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/tthoves_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        </TextView>
+
+
+        <TextView
+            android:layout_width="280dp"
+            android:textColor="#909090"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/tthoves_regular"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Please enter the verification code sent to +994 55 555 ** **"
+            android:layout_height="wrap_content">
+
+
+        </TextView>
+
+
+
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/pinview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:pinWidth="40dp"
+            app:pinHeight="44dp"
+            app:pinLength="6"
+            app:splitWidth="12dp"
+            app:cursorVisible="true"
+            app:forceKeyboard="true"
+            app:inputType="number"
+            app:password="false"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/finishBtnVerification"
+            android:layout_width="match_parent"
+            android:text="Finish"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:fontFamily="@font/tthoves_medium"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:padding="16dp"
+            app:rippleColor="@color/colorPrimary"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#3d3d3d"
+                android:textSize="14sp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/tthoves_regular"
+                android:text="Didn’t you receive a code?"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/tthoves_regular"
+                android:text="Resend"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+

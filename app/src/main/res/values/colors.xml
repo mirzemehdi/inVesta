@@ -6,4 +6,8 @@
     <color name="colorBlack">#131313</color>
     <color name="colorIdeaTitle">#262626</color>
     <color name="colorIdeaDescription">#909090</color>
+
+    <color name="colorDotDisable">#e7e7e7</color>
+    <color name="colorDotEnable">@color/colorPrimary</color>
+
 </resources>

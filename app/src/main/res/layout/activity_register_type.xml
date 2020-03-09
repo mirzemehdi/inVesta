@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    tools:context=".RegisterTypeActivity"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/mainContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/app_name"
+                android:textSize="36sp"
+                android:layout_marginTop="54dp"
+                android:layout_marginBottom="90dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/tthoves_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="24sp"
+                android:textColor="#3d3d3d"
+                android:fontFamily="@font/tthoves_bold"
+                android:layout_marginBottom="8dp"
+                android:text="Register"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#909090"
+                android:fontFamily="@font/tthoves_regular"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Choose your type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/investorBtn"
+                android:layout_width="match_parent"
+                android:text="Investor"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/tthoves_medium"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                app:backgroundTint="#fff"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp"
+                app:cornerRadius="4dp"
+                android:padding="16dp"
+                app:rippleColor="@color/colorPrimary"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <RelativeLayout
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="#cacaca"
+                    android:layout_centerInParent="true"
+                    android:layout_height="1dp">
+
+                </View>
+
+                <TextView
+                    android:text="OR"
+                    android:textColor="#909090"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:background="#fff"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/tthoves_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/smeBtn"
+                android:layout_width="match_parent"
+                android:text="SME"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/tthoves_medium"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:backgroundTint="#fff"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp"
+                app:cornerRadius="4dp"
+                android:padding="16dp"
+                app:rippleColor="@color/colorPrimary"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/signInBtnRegisterType"
+        android:text="@string/alreadyHaveAccountSignInTxt"
+        android:textColor="#3d3d3d"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/tthoves_regular"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+</LinearLayout>
+
+
+
+
+
+

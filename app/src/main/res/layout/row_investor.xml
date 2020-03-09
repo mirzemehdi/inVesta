@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_marginEnd="24dp"
     android:layout_height="wrap_content">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/row_investor_img"
         android:layout_width="64dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="24dp"
+        android:layout_gravity="center_horizontal"
+        android:src="#E5E5E5"
         android:layout_height="64dp">
 
 
@@ -18,11 +20,11 @@
 
     <TextView
         android:id="@+id/row_investor_name"
-        android:text="NextSale"
-        android:layout_marginStart="1dp"
+        android:text="Investor Name"
         android:fontFamily="@font/tthoves_medium"
         android:textSize="14sp"
         android:textColor="#434343"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
